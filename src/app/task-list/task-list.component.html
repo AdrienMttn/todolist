@@ -1,0 +1,14 @@
+@if (this.user.getUser() == undefined) {
+<div>
+  <h1>You need to be login</h1>
+  <p>to add and view your task</p>
+  <button (click)="goLogin()">Login</button>
+</div>
+} @else {
+<div>
+  @if(size > 0) { @for(task of taskList; track task.id) {
+  <app-task [uneTask]="task"></app-task>
+  } }
+  <app-new-task></app-new-task>
+</div>
+}

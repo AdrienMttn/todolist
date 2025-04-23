@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-size: 40px 40px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #5d5d5d,
+    #5d5d5d 0.5px,
+    #e5e5f7 0.5px,
+    #e5e5f7
+  );
+  font-family: "Gochi Hand", cursive;
+  color: #333;
+}
+
+input {
+  font-family: "Gochi Hand", cursive;
+  color: #343a40;
+}
+
+button {
+  font-family: "Gochi Hand", cursive;
+  color: #343a40;
+}

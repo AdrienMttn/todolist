@@ -1,0 +1,36 @@
+<div [ngClass]="{ mobile: isDesktop }">
+  <button
+    (click)="setCheck()"
+    (mouseover)="checkHover = true"
+    (mouseout)="checkHover = false"
+  >
+    <i
+      [ngClass]="{
+        'fa-check': !uneTask.check,
+        'fa-xmark': uneTask.check,
+        'fa-bounce': checkHover
+      }"
+      class="check fa-solid"
+    ></i>
+  </button>
+  <input
+    type="text"
+    #descriptionInput
+    [ngClass]="{ done: uneTask.check, important: uneTask.important }"
+    value="{{ uneTask.description }}"
+    (change)="editTask(uneTask.id, descriptionInput.value)"
+  />
+  <p [ngClass]="{ important: uneTask.important }">
+    {{ uneTask.date | date : "dd/MM/YYYY hh:mm" }}
+  </p>
+  <button (click)="setImportant()" [ngClass]="{ important: uneTask.important }">
+    <i class="fa-solid fa-star"></i>
+  </button>
+  <button
+    (click)="deleteTask(uneTask.id)"
+    (mouseover)="trashHover = true"
+    (mouseout)="trashHover = false"
+  >
+    <i [ngClass]="{ 'fa-bounce': trashHover }" class="fa-solid fa-trash"></i>
+  </button>
+</div>

@@ -1,0 +1,17 @@
+<header>
+  <h1>To-Do List</h1>
+  <nav>
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a routerLink="/tasks" routerLinkActive="active">Tasks</a>
+    @if(this.user.getUser() == undefined) {
+    <a routerLink="/login" routerLinkActive="active">Login</a>
+    }@else {
+    <a (click)="user.logout()">Logout</a>
+    }
+  </nav>
+</header>

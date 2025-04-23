@@ -1,0 +1,40 @@
+.task {
+  appearance: none;
+  outline: none;
+  font-size: 20px;
+  font-style: "Gochi Hand", cursive;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  margin: 10px;
+  text-align: center;
+  width: 100%;
+}
+div {
+  width: 80vw;
+  margin: 0px;
+  height: 40px;
+}
+
+button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 30px;
+  color: #141313;
+  &:hover {
+    color: #3d3d3d;
+  }
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+.mobile {
+  width: 100vw;
+}

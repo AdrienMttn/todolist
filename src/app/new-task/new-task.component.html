@@ -1,0 +1,13 @@
+<div [ngClass]="{ mobile: isDesktop }">
+  <form [formGroup]="formGroup" (ngSubmit)="addTask()">
+    <button type="submit" (mouseover)="hover = true" (mouseout)="hover = false">
+      <i [ngClass]="{ 'fa-beat': hover }" class="fa-solid fa-plus"></i>
+    </button>
+    <input
+      class="task"
+      id="task"
+      placeholder="description"
+      formControlName="description"
+    />
+  </form>
+</div>

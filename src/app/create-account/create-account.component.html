@@ -1,0 +1,70 @@
+<div class="login-container">
+  @if (this.http.getUser() == undefined) {
+  <h1>Sign Up</h1>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="Username">Username :</label>
+      <input type="text" formControlName="username" />
+      <small
+        *ngIf="
+          formGroup.controls.username.invalid &&
+          formGroup.get('username')?.touched
+        "
+        style="color: red; margin-left: 10px"
+      >
+        Please enter a valid username.
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="Email">Email :</label>
+      <input type="email" formControlName="email" />
+      <small
+        *ngIf="
+          formGroup.get('email')?.invalid && formGroup.get('email')?.touched
+        "
+        style="color: red; margin-left: 10px"
+      >
+        Please enter a valid email address.
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="password">password :</label>
+      <input type="password" formControlName="password" />
+      <small
+        *ngIf="
+          formGroup.get('password')?.invalid &&
+          formGroup.get('password')?.touched
+        "
+        style="color: red; margin-left: 10px"
+      >
+        Please enter a valid password.
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="confPassword">Confirm password :</label>
+      <input type="password" formControlName="confPassword" />
+      <small
+        *ngIf="
+          formGroup.get('confPassword')?.value !=
+            formGroup.get('password')?.value &&
+          formGroup.get('confPassword')?.touched
+        "
+        style="color: red; margin-left: 10px"
+      >
+        Passwords do not match.
+      </small>
+    </div>
+    <div class="button-container">
+      <button type="button" (click)="goLogin()">Login</button>
+      <button type="submit">Sign Up</button>
+    </div>
+  </form>
+
+  <div class="error-message" *ngIf="this.error">
+    {{ this.message }}
+  </div>
+  }@else {
+  <h1>Welcome {{ this.http.getUser()?.username }}</h1>
+  <button (click)="this.http.logout()">Logout</button>
+  }
+</div>

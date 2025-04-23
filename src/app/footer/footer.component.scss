@@ -1,0 +1,126 @@
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  background-color: #f8f9fad3;
+  font-size: 14px;
+  color: #6c757d;
+  height: 60vh;
+  z-index: -1;
+  border-top: #505050 3px dashed;
+}
+.trait {
+  width: 90%;
+  height: 2px;
+  background-color: #505050;
+  z-index: -1;
+}
+.top-footer {
+  padding: auto;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 50%;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  & h1 {
+    margin: 0;
+  }
+}
+
+.page-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  & a {
+    margin: 0;
+    padding: 0.2px;
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #505050;
+    }
+  }
+  & h1 {
+    padding: 0.2px;
+    color: #6c757d;
+    border-bottom: solid #505050 2px;
+  }
+}
+
+.page-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  & a {
+    margin: 0;
+    padding: 0.2px;
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #505050;
+    }
+  }
+  & h1 {
+    padding: 0.2px;
+    color: #6c757d;
+    border-bottom: solid #505050 2px;
+  }
+}
+a {
+  text-decoration: none;
+  color: #6c757d;
+  font-size: 30px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bottom-footer {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.social-media {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  & a {
+    margin: 0;
+    font-size: 40px;
+    padding: 0.2px;
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #505050;
+    }
+  }
+}

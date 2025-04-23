@@ -1,0 +1,88 @@
+.login-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: #f8f9fad3;
+}
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #343a40;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+  & label {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  & input {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    &:focus {
+      outline: none;
+      border-color: #343a40;
+    }
+  }
+  & a {
+    margin: 10px;
+    font-size: 16px;
+    text-align: right;
+    color: #343a40;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+button {
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 25px;
+  border: none;
+  background-color: #343a40;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: #495057;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 25px;
+  text-align: center;
+  position: absolute;
+  margin: 30vh;
+  padding: 10px;
+  bottom: 0;
+  border-radius: 25px;
+  font-family: "Courier New", Courier, monospace;
+}
